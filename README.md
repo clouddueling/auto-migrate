@@ -110,12 +110,14 @@ Still a bit of a work-in-progress, please report bugs
     ```
 
 # Todo
+ - UPGRADE TO PDO!!!! (original script is dependent on mysql_connect, maybe Eloquent?)
  - Create example artisan tasks for Laravel 3 and 4
  - Create a class that can generate a skeleton XML file for new tables
  - Support table engines changing from MyISAM to InnoDB
  - Create an adapter that can create migrations for up and down
  - Add to Travis
  - Implement an interface encouraging hexagonal structure
+ - Remove 'db' from the parameters for connecting
 
 # Goals
  - Allow for future database types to be able to use this with their own class and export script.
