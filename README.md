@@ -1,12 +1,15 @@
-This command line tool can be used to generate diffs between a MySQL XML dump
+This class can be used to generate diffs between a MySQL XML dump
 file, and a database which currently exists. It will tell you the missing
 tables and columns (return as an array), or generate MySQL queries to add the
 missing columns in.
 
-It can also pretty reliably create complete databases based on the XML dump file,
-with indexes.
+Still a bit of a work-in-progress, please report bugs
 
-Still a bit of a work-in-progress, please report bugs at the github site
+
+# Getting Started
+
+1. Export your database to XML schema files.
+2. Use the class to loop through each schema file and update your database.
 
 ===================
 Usage:
@@ -78,6 +81,7 @@ Class Usage:
 
 ## Todo
  - Support table engines changing from MyISAM to InnoDB
+ - Create migrations for up and down
 
 
-    @author Nabeel Shahzad <https://github.com/nshahzad/MySQLDiff>
+@author Nabeel Shahzad <https://github.com/nshahzad/MySQLDiff>

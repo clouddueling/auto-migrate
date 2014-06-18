@@ -1,11 +1,12 @@
-<?php
+<?php namespace CloudDueling\AutoMigrate;
+
 /**
  * MySQLDiff
  *
  * @package MySQLDiff
  * @author Nabeel Shahzad <https://github.com/nshahzad/MySQLDiff>
  */
-class MySQLDiff {
+class MySQL {
 
     public $xml_errors = array();
     public $sql_errors = array();
@@ -391,28 +392,3 @@ class MySQLDiff {
         return $this->missingCols;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

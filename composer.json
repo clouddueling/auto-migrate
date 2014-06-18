@@ -1,5 +1,5 @@
 {
-    "name": "clouddueling/MySQLAutoMigration",
+    "name": "clouddueling/AutoMigrate",
     "description": "Automatically generate MySQL up and down migrations.",
     "license": "MIT",
     "keywords": [

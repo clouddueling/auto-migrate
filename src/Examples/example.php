@@ -1,8 +1,6 @@
 <?php
 
-require 'src/MySQLDiff.php';
-
-use CloudDueling\MySQLAutoMigrator;
+require 'src/MySQL.php';
 
 $params = array(
     'dbuser' => 'root',
@@ -23,7 +21,7 @@ foreach ($files as $file) {
     $params['dumpxml'] = 'example/' . $file;
 
     try {
-        $diff = new MySQLDiff($params);
+        $diff = new CloudDueling\AutoMigrate\MySQL($params);
         $diff_lines = $diff->runSQLDiff();
     } catch(Exception $e) {
         echo $e->getMessage(); exit;
