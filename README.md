@@ -31,15 +31,14 @@ The XML files outputted will be how you manage what your database looks like fro
 
 2. When you make a change to your schema files you then use `CloudDueling\AutoMigrate\MySQL` and to loop through each schema file and to alter your database.
 
-# Class Usage:
+Example of available methods:
 
 ```php
     $params = array(
-        'dbuser' => 'testuser',
-        'dbpass' => 'test1',
-        'dbname' => 'testuser',
-        'dbhost' => 'localhost',
-        'dumpxml' => 'structure.xml',
+        'dbuser' => 'root',
+        'dbpass' => 'root',
+        'dbname' => 'database',
+        'dbhost' => 'localhost'
     );
 
     try {
@@ -48,7 +47,7 @@ The XML files outputted will be how you manage what your database looks like fro
         echo $e->getMessage(); exit;
     }
 
-    # This returns an array of what's missing in the database
+    // This returns an array of what's missing in the database
     try {
         $diff_lines = $diff->getDiffs();
         var_dump($diff_lines);
@@ -56,7 +55,7 @@ The XML files outputted will be how you manage what your database looks like fro
         echo $e->getMessage(); exit;
     }
 
-    # This returns SQL queries which can be run to fix the database
+    // This returns SQL queries which can be run to fix the database
     try {
         $diff_lines = $diff->getSQLDiffs();
         var_dump($diff_lines);
@@ -64,13 +63,41 @@ The XML files outputted will be how you manage what your database looks like fro
         echo $e->getMessage(); exit;
     }
 
-    # This generates the SQL and actually runs all of them
+    // This generates the SQL and actually runs all of them
     try {
         $diff_lines = $diff->runSQLDiff();
         var_dump($diff_lines);
     } catch(Exception $e) {
         echo $e->getMessage(); exit;
     }
+```
+
+Example looping through a directory of schemas and update your database with them.
+
+```php
+$params = array(
+    'dbuser' => 'root',
+    'dbpass' => 'root',
+    'dbname' => 'database',
+    'dbhost' => 'localhost'
+);
+
+$files = scandir('example');
+
+foreach ($files as $file) {
+    if (in_array($file, ['.','..','.DS_Store'])) {
+        continue;
+    }
+
+    $params['dumpxml'] = 'example/' . $file;
+
+    try {
+        $diff = new CloudDueling\AutoMigrate\MySQL($params);
+        $diff_lines = $diff->runSQLDiff();
+    } catch(Exception $e) {
+        echo $e->getMessage(); exit;
+    }
+}
 ```
 
 # Todo
