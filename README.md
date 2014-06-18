@@ -1,3 +1,7 @@
+# WARNING
+
+This project is brand new but will be quickly maturing if it proves to be a big timesaver.
+
 This class can be used to generate diffs between a MySQL XML dump
 file, and a database which currently exists. It will tell you the missing
 tables and columns (return as an array), or generate MySQL queries to add the
