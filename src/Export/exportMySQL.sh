@@ -31,7 +31,7 @@ tbl_count=0
 
 for t in $($MYSQL -NBA -h $DB_host -u $DB_user -p$DB_pass -D $DB -e 'show tables')
 do
-    echo "DUMPING TABLE: $t"
+    echo "Creating schema: $t"
     $MYSQLDUMP -h $DB_host -u $DB_user -p$DB_pass $DB $t --xml > $DIR/$t.xml
     (( tbl_count++ ))
 done

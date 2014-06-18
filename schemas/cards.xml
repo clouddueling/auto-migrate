@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="clouddueling">
+	<table_structure name="cards">
+		<field Field="id" Type="int(10) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="account_user_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="category_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="dashboard_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_by" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="deleted" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="marketing" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="form" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="body" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="after_action" Type="varchar(40)" Null="NO" Key="" Default="confirm-text" Extra="" Comment="" />
+		<field Field="redirect_url" Type="varchar(2000)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="redirect_card_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="create_contact" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="confirmation_text" Type="varchar(2000)" Null="NO" Key="" Default="Thank you for filling out my form!" Extra="" Comment="" />
+		<field Field="public" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="type" Type="varchar(45)" Null="NO" Key="" Default="forms" Extra="" Comment="" />
+		<field Field="updated_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="store" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="duel_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="points" Type="int(10) unsigned" Null="NO" Key="" Default="20" Extra="" Comment="" />
+		<field Field="monetary_value" Type="decimal(10,2)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="letterhead_id" Type="varchar(10)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="color" Type="varchar(7)" Null="NO" Key="" Default="#ffffff" Extra="" Comment="" />
+		<field Field="upload_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="supply_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="replaced_card_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="card_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="supply_type_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="instructions" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="stats" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="other" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="image" Type="varchar(200)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="compact" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="settings" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="country" Type="varchar(3)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="make_new_entry" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="meet_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mailing_service" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="background_image" Type="varchar(200)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="zoom" Type="varchar(6)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<field Field="printable" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="show_counters" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_name" Type="varchar(600)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_description" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_image" Type="varchar(200)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="contactgroup_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="leaderboards_conversion_id" Type="int(11)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="leaderboards_stat" Type="varchar(1000)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="designer_type" Type="varchar(100)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="duplicate_card_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="show_figure" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="cards" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="cards" Non_unique="1" Key_name="cards_leaderboards_conversion_id_index" Seq_in_index="1" Column_name="leaderboards_conversion_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="cards" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="1220542464" Auto_increment="1" Create_time="2014-06-16 21:33:50" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="cards">
+	</table_data>
+</database>
+</mysqldump>

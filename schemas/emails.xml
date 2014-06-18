@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="clouddueling">
+	<table_structure name="emails">
+		<field Field="id" Type="int(10) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="account_user_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="queue_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="contact_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="subject" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="body" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="template" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="template_email_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="deleted" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="updated_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="sent" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="varchar(500)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="duel_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="contact_process_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="upload_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="card_process_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="card_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="image" Type="varchar(200)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="replaced_email_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="supply_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="process_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="to" Type="varchar(250)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="contactgroup_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="status" Type="varchar(45)" Null="NO" Key="" Default="draft" Extra="" Comment="" />
+		<field Field="customer_object_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="serie_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="blast" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="now" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="duplicate_email_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="emails" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="emails" Non_unique="1" Key_name="emails_user_id_index" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="emails" Non_unique="1" Key_name="emails_account_user_id_index" Seq_in_index="1" Column_name="account_user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="emails" Non_unique="1" Key_name="emails_queue_id_index" Seq_in_index="1" Column_name="queue_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="emails" Non_unique="1" Key_name="emails_contact_id_index" Seq_in_index="1" Column_name="contact_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="emails" Non_unique="1" Key_name="emails_contactgroup_id_index" Seq_in_index="1" Column_name="contactgroup_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="emails" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="81920" Data_free="1220542464" Auto_increment="1" Create_time="2014-06-16 21:33:48" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="emails">
+	</table_data>
+</database>
+</mysqldump>

@@ -9,37 +9,31 @@ Still a bit of a work-in-progress, please report bugs
 # Getting Started
 
 1. Export your database to XML schema files.
-2. Use the class to loop through each schema file and update your database.
 
-===================
-Usage:
-===================
+```bash
+sh src/Export/exportMySQL.sh <hostname> <username> <database> <output_dir>
+```
 
-Generate a MySQL Dump file:
+Your output should look like:
 
-mysqldump --xml --no-data testuser -utestuser -ptest1 > structure.xml
+```
+Creating schema: series
+Creating schema: services
+Creating schema: sessions
+Creating schema: slides
+Creating schema: speakers
+Creating schema: states
+Creating schema: steps
+Creating schema: subscription
+```
 
-Then call the command line script (diffgen):
+The XML files outputted will be how you manage what your database looks like from now on.
 
-    diffgen -utestuser -ptest1 -dtestuser -hlocalhost -fstructure.xml -tshow
+2. When you make a change to your schema files you then use `CloudDueling\AutoMigrate\MySQL` and to loop through each schema file and to alter your database.
 
-    -u  Database User
-    -p  Database Password
-    -d  Database Name
-    -h  Database Host
-    -f  Dump File Path
-    -t  "show" or "run" - show will output the SQL, "run" will run the SQL
+# Class Usage:
 
-There's also a class file (which it is all from), which you can use to
-integrate into your own custom scripts (as-is the case with phpVMS, which
-is distributed with the structure.xml, and it "shapes" the database on the
-remote server properly).
-
-
-===================
-Class Usage:
-===================
-
+```php
     $params = array(
         'dbuser' => 'testuser',
         'dbpass' => 'test1',
@@ -77,11 +71,9 @@ Class Usage:
     } catch(Exception $e) {
         echo $e->getMessage(); exit;
     }
+```
 
-
-## Todo
+# Todo
  - Support table engines changing from MyISAM to InnoDB
  - Create migrations for up and down
-
-
-@author Nabeel Shahzad <https://github.com/nshahzad/MySQLDiff>
+ - Add to Travis

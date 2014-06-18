@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="clouddueling">
+	<table_structure name="laravel_migrations">
+		<field Field="bundle" Type="varchar(50)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="name" Type="varchar(200)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="batch" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="laravel_migrations" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="bundle" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="laravel_migrations" Non_unique="0" Key_name="PRIMARY" Seq_in_index="2" Column_name="name" Collation="A" Cardinality="75" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="laravel_migrations" Engine="InnoDB" Version="10" Row_format="Compact" Rows="75" Avg_row_length="218" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="1220542464" Create_time="2014-06-16 21:33:15" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="laravel_migrations">
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_21_012523_create_clouddueling_database</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_21_063013_create_tracker_images_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_22_053445_create_session_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_22_163436_create_indices</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_23_045000_create_card_leaderboard_columns</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_24_181527_create_trackers_indices</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_24_181908_create_values_indices</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_24_182205_create_groups_indices</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_26_025342_add_show_gamify_column_series</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_26_042003_add_show_accountability_column_series</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_29_190940_remove_upload_width_height</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_11_29_235751_add_scenario_to_uploads</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_01_221240_create_note_type_columns</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_02_002939_rename_note_text_to_body</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_15_183140_add_version_scenario_column</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_17_180904_pricing_seed_data</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_19_024438_add_action_column_to_notes</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_19_185503_add_now_column_emails</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2013_12_19_185906_add_now_column_texts</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_18_012959_add_designer_column_cards</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_18_043835_create_page_id_column_pages</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_19_172351_convert_supply_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_20_214600_add_require_shipping_address_column</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_21_004018_add_options_column_orders</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_21_042730_add_description_supplies</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_25_041025_add_is_editable_column_serie</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_26_031132_add_duplicate_columns</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_01_27_214549_add_options_column_supplies</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_09_033431_add_card_column_has_figure</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_17_001454_add_column_pages_duplicate_page_id</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_19_200018_add_meet_queue_column</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_19_233522_add_sales_tax_column_supplies</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_20_003928_add_subtatotal_column_orders</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_24_143357_add_duplicate_column_conversions</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_02_26_032254_add_twilio_column_text</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_05_010415_add_process_hidden_column</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_07_202810_add_files_to_comments</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_08_230819_add_upload_id_column_conversations</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_09_224500_add_value_column_to_likes</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_10_161016_create_plan</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_10_204203_create_plan_user</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_10_213646_add_plan_id_column_orders</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_20_015548_create_user_notifications</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_25_235139_add_top_dueling_leaderboards_users_column_serie</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_28_014853_add_uploads_filesize_column</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_03_30_222449_add_contactgroup_id_column</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_04_21_181011_create_tags_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_04_21_181020_create_tags_upload_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_04_21_181031_create_tags_card_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_04_29_162206_addcontact_field_to_update_column_to_groupsa</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_03_025828_create_topic_and_posts</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_03_221017_create_topic_user_stars</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_04_175151_add_topic_count_columns</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_10_190244_create_card_user_favorites</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_13_203356_create_topic_user_notifications</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_14_173423_create_contact_user</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_14_174304_create_portal_contact_user</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_15_014859_create_portal_users_members</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_05_15_204439_create_portal_user_items</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_03_142937_add_remember_token_users</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_03_204148_create_owner_provider</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_04_193937_create_team_invites</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_05_011817_create_account_roles</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_05_193652_create_account_user_pays</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_06_213025_create_account_benefits</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_09_191120_update_timeblocks</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_09_213829_create_user_holidays</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_10_184930_create_accounts</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_10_191312_create_account_user_pivot</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_10_205830_add_cloudinary_user_table</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_10_223225_create_account_role_user</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_10_223330_create_account_pay_user</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_10_223408_create_account_benefit_user</field>
+		<field name="batch">1</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_17_231922_create_user_goals</field>
+		<field name="batch">2</field>
+	</row>
+	<row>
+		<field name="bundle">application</field>
+		<field name="name">2014_06_17_232113_create_user_timeblocks</field>
+		<field name="batch">2</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

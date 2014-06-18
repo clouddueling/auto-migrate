@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="clouddueling">
+	<table_structure name="groups">
+		<field Field="id" Type="int(10) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="account_user_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="image_id" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="card_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="name" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="color" Type="varchar(10)" Null="NO" Key="" Default="#336699" Extra="" Comment="" />
+		<field Field="order_by" Type="decimal(10,2)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="visible" Type="tinyint(1)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<field Field="html" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="experience" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="instructions" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="address" Type="varchar(1000)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="required" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="video" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="file" Type="varchar(400)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="type" Type="varchar(45)" Null="NO" Key="" Default="text" Extra="" Comment="" />
+		<field Field="deleted" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="columns" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="likert_columns" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="left_slider_label" Type="varchar(800)" Null="NO" Key="" Default="Terrible" Extra="" Comment="" />
+		<field Field="right_slider_label" Type="varchar(800)" Null="NO" Key="" Default="Great" Extra="" Comment="" />
+		<field Field="center_slider_label" Type="varchar(800)" Null="NO" Key="" Default="No Change" Extra="" Comment="" />
+		<field Field="terms" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="blank_on_checkin" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="update_on_checkin" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="input_on_checkin" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="follow" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="hidden" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="updated_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="upload_id" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="stats" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="pos_x" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="pox_y" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="duplicate_group_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="contact_field_to_update" Type="tinyint(1)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="groups" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="groups" Non_unique="1" Key_name="groups_user_id_index" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="groups" Non_unique="1" Key_name="groups_account_user_id_index" Seq_in_index="1" Column_name="account_user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="groups" Non_unique="1" Key_name="groups_card_id_index" Seq_in_index="1" Column_name="card_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="groups" Non_unique="1" Key_name="groups_upload_id_index" Seq_in_index="1" Column_name="upload_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="groups" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="65536" Data_free="1220542464" Auto_increment="1" Create_time="2014-06-16 21:33:53" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="groups">
+	</table_data>
+</database>
+</mysqldump>

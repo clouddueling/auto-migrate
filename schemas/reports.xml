@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="clouddueling">
+	<table_structure name="reports">
+		<field Field="id" Type="int(10) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="type" Type="varchar(200)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="message" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="ip" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="browser_vendor" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="url" Type="varchar(300)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="browser_version" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="os_vendor" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_id" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="updated_at" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="server" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="country" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="state" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="isp" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="timezone" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="city" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="reports" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="reports" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="1220542464" Auto_increment="1" Create_time="2014-06-16 21:33:32" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="reports">
+	</table_data>
+</database>
+</mysqldump>
