@@ -12,7 +12,7 @@ Still a bit of a work-in-progress, please report bugs
     ```json
     {
         "require": {
-            "league/fractal": "0.8.*"
+            "clouddueling/auto-migrate": "dev-master"
         }
     }
     ```
