@@ -93,22 +93,35 @@ missing columns in.
         'dbhost' => 'localhost'
     );
 
-    $files = scandir('example');
+    $files = scandir('schemas');
+    $differences = 0;
 
     foreach ($files as $file) {
         if (in_array($file, ['.','..','.DS_Store'])) {
             continue;
         }
 
-        $params['dumpxml'] = 'example/' . $file;
+        $params['dumpxml'] = 'schemas/' . $file;
 
         try {
             $diff = new CloudDueling\AutoMigrate\MySQL($params);
-            $diff_lines = $diff->runSQLDiff();
+            $diff_lines = $diff->getSQLDiffs();
+            if (count($diff_lines) == 0) {
+                continue;
+            }
+
+            ++$differences;
+
+            echo "Difference found: {$params['dumpxml']}\n" .
+            " - " . implode("\n - ", $diff_lines) . "\n\n";
+            $diff->runSQLDiff();
         } catch(Exception $e) {
-            echo $e->getMessage(); exit;
+            echo $e->getMessage() . "\n";
+            exit;
         }
     }
+
+    echo "Differences found: {$differences}\n";
     ```
 
 # Todo
