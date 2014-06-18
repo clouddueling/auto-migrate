@@ -7,8 +7,6 @@ file, and a database which currently exists. It will tell you the missing
 tables and columns (return as an array), or generate MySQL queries to add the
 missing columns in.
 
-Still a bit of a work-in-progress, please report bugs
-
 # Getting Started
 
 1. Install via composer:
