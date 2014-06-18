@@ -1,0 +1,8 @@
+.idea
+.ruby-version
+composer.lock
+build
+vendor
+Gemfile.lock
+coverage
+.DS_STORE

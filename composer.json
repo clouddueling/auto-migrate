@@ -1,0 +1,36 @@
+{
+    "name": "clouddueling/MySQLAutoMigration",
+    "description": "Automatically generate MySQL up and down migrations.",
+    "license": "MIT",
+    "keywords": [
+        "mysql",
+        "migrations",
+        "auto"
+    ],
+    "authors": [
+        {
+            "name": "Nabeel Shahzad",
+            "role": "Creator"
+        },
+        {
+            "name": "Michael J. Calkins",
+            "email": "michael@clouddueling.com",
+            "homepage": "https://clouddueling.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.9",
+        "illuminate/pagination": "~4.1",
+        "squizlabs/php_codesniffer": "~1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CloudDueling\\MySQLAutoMigration\\": "src"
+        }
+    }
+}
