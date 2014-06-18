@@ -1,5 +1,10 @@
 <?php namespace CloudDueling\AutoMigrate;
 
+function dd($string) {
+    var_dump($string);
+    exit;
+}
+
 /**
  * MySQLDiff
  *
@@ -296,7 +301,7 @@ class MySQL {
             $tableName = (string) $table['name'];
 
             # Get a list of columns from this table...
-            $desc_result = mysql_query('DESCRIBE '.$tableName, $this->db);
+            $desc_result = mysql_query('DESCRIBE `' . $tableName . '`', $this->db);
 
             # Make sure table exists...
             $columns = array();
@@ -358,7 +363,7 @@ class MySQL {
 
             # Find any missing indexes
             $indexes = array();
-            $res = mysql_query('SHOW INDEXES IN '.$tableName);
+            $res = mysql_query('SHOW INDEXES IN `' . $tableName . '`');
             if($res) {
                 while($index = mysql_fetch_object($res)) {
                     $indexes[] = $index;
