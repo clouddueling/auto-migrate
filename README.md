@@ -85,43 +85,58 @@ missing columns in.
 
     Example looping through a directory of schemas and update your database with them.
 
+    Laravel 4 Task
     ```php
-    $params = array(
-        'dbuser' => 'root',
-        'dbpass' => 'root',
-        'dbname' => 'database',
-        'dbhost' => 'localhost'
-    );
+    // Coming soon, feel free to PR this
+    ```
 
-    $files = scandir('schemas');
-    $differences = 0;
+    Laravel 3 Task
+    ```php
+    <?php
 
-    foreach ($files as $file) {
-        if (in_array($file, ['.','..','.DS_Store'])) {
-            continue;
-        }
+    class Schema_Task {
 
-        $params['dumpxml'] = 'schemas/' . $file;
+        public function update($arguments)
+        {
+            $params = array(
+                'dbuser' => Config::get('database.connections.mysql.username'),
+                'dbpass' => Config::get('database.connections.mysql.password'),
+                'dbname' => Config::get('database.connections.mysql.database'),
+                'dbhost' => Config::get('database.connections.mysql.host')
+            );
 
-        try {
-            $diff = new CloudDueling\AutoMigrate\MySQL($params);
-            $diff_lines = $diff->getSQLDiffs();
-            if (count($diff_lines) == 0) {
-                continue;
+            $files = scandir(Config::get('schemas.path'));
+            $differences = 0;
+
+            foreach ($files as $file) {
+                if (in_array($file, ['.','..','.DS_Store'])) {
+                    continue;
+                }
+
+                $params['dumpxml'] = Config::get('schemas.path') . '/' . $file;
+
+                try {
+                    $diff = new CloudDueling\AutoMigrate\MySQL($params);
+                    $diff_lines = $diff->getSQLDiffs();
+                    if (count($diff_lines) == 0) {
+                        continue;
+                    }
+
+                    ++$differences;
+
+                    echo "Difference found: {$params['dumpxml']}\n" .
+                    " - " . implode("\n - ", $diff_lines) . "\n\n";
+                    $diff->runSQLDiff();
+                } catch(Exception $e) {
+                    echo $e->getMessage() . "\n";
+                    exit;
+                }
             }
 
-            ++$differences;
-
-            echo "Difference found: {$params['dumpxml']}\n" .
-            " - " . implode("\n - ", $diff_lines) . "\n\n";
-            $diff->runSQLDiff();
-        } catch(Exception $e) {
-            echo $e->getMessage() . "\n";
-            exit;
+            echo "Differences found: {$differences}\n";
         }
-    }
 
-    echo "Differences found: {$differences}\n";
+    }
     ```
 
 # Todo
@@ -133,15 +148,19 @@ missing columns in.
  - Add to Travis
  - Implement an interface encouraging hexagonal structure
  - Remove 'db' from the parameters for connecting
+ - Extract the deeply nested loops to smaller understandable classes.
 
 # Goals
  - Allow for future database types to be able to use this with their own class and export script.
+ - PSR compliant
 
 # Contributing
 
 Please create an issue first with your idea or bug for discussion so no one codes unnecessarily.
 
 # Credits
+
+Much thanks to Nabeel Shahzad who originally wrote this class.
 
 # License
 
