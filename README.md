@@ -111,6 +111,7 @@ Still a bit of a work-in-progress, please report bugs
 
 # Todo
  - Create example artisan tasks for Laravel 3 and 4
+ - Create a class that can generate a skeleton XML file for new tables
  - Support table engines changing from MyISAM to InnoDB
  - Create migrations for up and down
  - Add to Travis
