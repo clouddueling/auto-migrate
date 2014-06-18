@@ -110,11 +110,18 @@ Still a bit of a work-in-progress, please report bugs
     ```
 
 # Todo
+ - Create example artisan tasks for Laravel 3 and 4
  - Support table engines changing from MyISAM to InnoDB
  - Create migrations for up and down
  - Add to Travis
+ - Implement an interface encouraging hexagonal structure
+
+# Goals
+ - Allow for future database types to be able to use this with their own class and export script.
 
 # Contributing
+
+Please create an issue first with your idea or bug for discussion so no one codes unnecessarily.
 
 # Credits
 
