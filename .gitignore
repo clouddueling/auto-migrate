@@ -6,3 +6,5 @@ vendor
 Gemfile.lock
 coverage
 .DS_STORE
+test.php
+/schemas

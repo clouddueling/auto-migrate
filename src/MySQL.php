@@ -26,7 +26,7 @@ class MySQL {
     public function __construct($params) {
 
         if(!is_array($params)) {
-            throw new Exception("Invalid parameters passed");
+            throw new \Exception("Invalid parameters passed");
             return false;
         }
 
@@ -47,18 +47,18 @@ class MySQL {
         );
 
         if(!$this->db) {
-            throw new Exception("Could not connect to {$this->params['dbuser']}@{$this->params['dbserver']}");
+            throw new \Exception("Could not connect to {$this->params['dbuser']}@{$this->params['dbserver']}");
             return false;
         }
 
         if(!mysql_select_db($this->params['dbname'], $this->db)) {
-            throw new Exception("Could not select database {$this->params['dbname']}");
+            throw new \Exception("Could not select database {$this->params['dbname']}");
             return false;
         }
 
 
         if(!file_exists($this->params['dumpxml'])) {
-            throw new Exception("XML File \"{$this->params['dumpxml']}\" does not exist!");
+            throw new \Exception("XML File \"{$this->params['dumpxml']}\" does not exist!");
             return false;
         }
 
@@ -68,7 +68,7 @@ class MySQL {
 
         if ($this->xml === false) {
             $this->xml_errors = implode("\n", $this->xml_errors);
-            throw new Exception ("Errors in XML File: {$this->xml_errors}");
+            throw new \Exception ("Errors in XML File: {$this->xml_errors}");
             return false;
         }
 
@@ -117,7 +117,7 @@ class MySQL {
             $sql[] = ')';
 
             $sql[] = 'ENGINE = '.$table['Engine'];
-            $sql[] = 'AUTO_INCREMENT = '.$table['Auto_increment'];
+            $sql[] = 'AUTO_INCREMENT = ' . (isset($table['Auto_increment']) ? $table['Auto_increment'] : 0);
             $sql[] = 'COMMENT = \''.$table['Comment'].'\'';
             $sql[] = 'COLLATE '.$table['Collation'];
 
@@ -262,7 +262,7 @@ class MySQL {
         foreach ($sqlList as $sql) {
             $res = mysql_query($sql, $this->db);
             #if(!$res) {
-            #    throw new Exception(mysql_errno().': '.mysql_error());
+            #    throw new \Exception(mysql_errno().': '.mysql_error());
             #}
 
             if(mysql_errno() != 0) {
@@ -300,7 +300,7 @@ class MySQL {
 
             # Make sure table exists...
             $columns = array();
-            if(mysql_errno() == 1146) {
+            if(mysql_errno() == 1146 || !$desc_result) {
                 foreach($table->options->attributes() as $key => $value) {
                     $this->missingCols['tables'][$tableName][$key] = (string) $value;
                 }
