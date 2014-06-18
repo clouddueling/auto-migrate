@@ -165,4 +165,3 @@ Much thanks to Nabeel Shahzad who originally wrote this class.
 # License
 
 The MIT License (MIT). Please see [License File](https://github.com/clouddueling/auto-migrate/blob/master/LICENSE) for more information.
-
